@@ -24,7 +24,8 @@ public class AppleTest {
         List<Apple> greenApple = filterApples(inventory, apple -> apple.getColor().equals(Color.GREEN) );
         System.out.println(greenApple);
 
-
+        List<Apple> heavyApple = filterApples(inventory, apple -> apple.getWeight() > 150);
+        System.out.println(heavyApple);
 
     }
 
