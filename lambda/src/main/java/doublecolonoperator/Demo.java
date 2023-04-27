@@ -36,5 +36,9 @@ public class Demo {
 
         Consumer<Integer> display2 = System.out::println;   //System.out is a static class
         display2.accept(5);
+
+        BiFunction<MyClass,Integer,Double> v2 = MyClass::method;
+
+        BiFunction<String,String,String> v3 = String::concat;
     }
 }
