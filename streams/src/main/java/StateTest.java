@@ -27,6 +27,7 @@ public class StateTest {
                 .map(State::getCities)
                 .flatMap(List::stream)
                 .forEach(System.out::println);
+
         System.out.println("************");
         //with flatMap. less clean
         list.stream()

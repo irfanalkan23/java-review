@@ -19,13 +19,17 @@ public class InfiniteStreamFibonacci {
              .forEach(t -> System.out.println("("+t[0]+","+t[1]+")"));
          */
 
-//        Stream.iterate(new int[]{0,1},n->n.)
-//             .limit(20)
-//                .forEach(t -> System.out.println("("+t[0]+","+t[1]+")"));
+        Stream.iterate(new int[]{0,1},t->new int[]{t[1],t[0]+t[1]})
+                .limit(8)
+                .forEach(t -> System.out.println("("+t[0]+","+t[1]+")"));
 
         /*
         TASK
         Print the Fibonacci series in normal way. (Following of previous task)
          */
+        Stream.iterate(new int[]{0,1},t->new int[]{t[1],t[0]+t[1]})
+                .limit(8)
+                .map(t->t[0])
+                .forEach(System.out::println);
     }
 }
