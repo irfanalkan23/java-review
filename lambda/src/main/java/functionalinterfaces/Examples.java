@@ -1,6 +1,5 @@
 package functionalinterfaces;
 
-import java.util.Map;
 import java.util.function.*;
 
 public class Examples {
